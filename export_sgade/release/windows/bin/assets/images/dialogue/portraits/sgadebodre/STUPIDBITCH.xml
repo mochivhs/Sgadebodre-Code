@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="STUPIDBITCH.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sgadebodre talki0000" x="0" y="0" width="412" height="161"/>
+	<SubTexture name="sgadebodre talki mads0000" x="0" y="161" width="412" height="265"/>
+</TextureAtlas>

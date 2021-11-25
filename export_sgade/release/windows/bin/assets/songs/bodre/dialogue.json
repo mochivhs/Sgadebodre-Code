@@ -1,0 +1,82 @@
+{
+    "box": "speech_bubble_talking",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": " "
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": " "
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": " "
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "what the fuck was that"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "that was shit"
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": ">:0",
+            "boxState": "yell"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "what?",
+            "boxState": "normal"
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": "HOW DARE YOU SAy thta",
+            "boxState": "yell"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "wtf/",
+            "boxState": "normal"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "it was spammy af"
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": ">:("
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": "REMAHGT NOW1!!1!1!!1!!1",
+            "boxState": "yell"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": " ",
+            "boxState": "normal"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "i hate this so fucking much"
+        }
+    ]
+}

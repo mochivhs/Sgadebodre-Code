@@ -1,0 +1,47 @@
+{
+    "box": "speech_bubble_talking",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "bruh"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "why tf do you want to rap battle"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "i want to be with my gf for once"
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": "because yes"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": " "
+        },
+        {
+            "portrait": "STUPIDBITCH",
+            "expression": "normal",
+            "text": "can we rap battle now"
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": " "
+        },
+        {
+            "portrait": "bf",
+            "expression": "mad",
+            "text": "ok",
+            "scale": 0.3
+        }
+    ]
+}

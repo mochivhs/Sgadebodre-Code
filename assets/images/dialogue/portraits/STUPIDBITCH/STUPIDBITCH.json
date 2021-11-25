@@ -1,0 +1,12 @@
+{
+    "name": "STUPIDBITCH",
+    "expressions": {
+        "normal": "sgadebodre talki"
+    },
+    "position": "left",
+    "loop": false,
+
+    "sounds": ["pixelText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

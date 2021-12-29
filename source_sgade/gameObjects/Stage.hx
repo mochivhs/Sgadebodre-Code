@@ -69,7 +69,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					curStage = 'philly';
 				case 'milf' | 'satin-panties' | 'high':
 					curStage = 'highway';
-				case 'cocoa' | 'eggnog':
+				case 'cocoa' | 'eggnog' | 'sgademas':
 					curStage = 'mall';
 				case 'winter-horrorland':
 					curStage = 'mallEvil';
@@ -450,6 +450,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'pisssgadebodre':
 				dad.x -= 150;
 				dad.y += 100;
+			case 'sgadebodreXmas':
+				dad.x -= 150;
+				dad.y += 100;	
 		}
 	}
 

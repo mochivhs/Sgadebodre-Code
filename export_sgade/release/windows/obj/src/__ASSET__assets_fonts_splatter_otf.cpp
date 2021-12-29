@@ -11,13 +11,13 @@
 #include <lime/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_b34798472c195bcf_490_new,"__ASSET__assets_fonts_splatter_otf","new",0xfbbb2e9a,"__ASSET__assets_fonts_splatter_otf.new","ManifestResources.hx",490,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_b34798472c195bcf_499_new,"__ASSET__assets_fonts_splatter_otf","new",0xfbbb2e9a,"__ASSET__assets_fonts_splatter_otf.new","ManifestResources.hx",499,0xf77aa668)
 
 void __ASSET__assets_fonts_splatter_otf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_b34798472c195bcf_490_new)
-HXDLIN( 490)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/splatter.otf",a9,84,bf,17));
-HXDLIN( 490)		this->name = HX_("Splatter Kings",9b,e7,3d,40);
-HXDLIN( 490)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_b34798472c195bcf_499_new)
+HXDLIN( 499)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/splatter.otf",a9,84,bf,17));
+HXDLIN( 499)		this->name = HX_("Splatter Kings",9b,e7,3d,40);
+HXDLIN( 499)		super::__construct(null());
             	}
 
 Dynamic __ASSET__assets_fonts_splatter_otf_obj::__CreateEmpty() { return new __ASSET__assets_fonts_splatter_otf_obj; }

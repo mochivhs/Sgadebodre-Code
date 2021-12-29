@@ -14,13 +14,13 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_cb2440362a9b31ab_516_new,"__ASSET__OPENFL__assets_fonts_splatter_otf","new",0x7e35a9ea,"__ASSET__OPENFL__assets_fonts_splatter_otf.new","ManifestResources.hx",516,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_cb2440362a9b31ab_525_new,"__ASSET__OPENFL__assets_fonts_splatter_otf","new",0x7e35a9ea,"__ASSET__OPENFL__assets_fonts_splatter_otf.new","ManifestResources.hx",525,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_splatter_otf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_cb2440362a9b31ab_516_new)
-HXDLIN( 516)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/splatter.otf",a9,84,bf,17));
-HXDLIN( 516)		this->name = HX_("Splatter Kings",9b,e7,3d,40);
-HXDLIN( 516)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_cb2440362a9b31ab_525_new)
+HXDLIN( 525)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/splatter.otf",a9,84,bf,17));
+HXDLIN( 525)		this->name = HX_("Splatter Kings",9b,e7,3d,40);
+HXDLIN( 525)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_splatter_otf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_splatter_otf_obj; }

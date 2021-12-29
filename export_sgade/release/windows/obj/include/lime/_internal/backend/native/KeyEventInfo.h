@@ -6,7 +6,7 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_STACK_FRAME(_hx_pos_cef4a471e9b9c478_759_new)
+HX_DECLARE_STACK_FRAME(_hx_pos_cef4a471e9b9c478_747_new)
 HX_DECLARE_CLASS4(lime,_internal,backend,native,KeyEventInfo)
 
 namespace lime{
@@ -44,11 +44,11 @@ class HXCPP_CLASS_ATTRIBUTES KeyEventInfo_obj : public ::hx::Object
             		int windowID = __o_windowID.Default(0);
             		int keyCode = __o_keyCode.Default(0);
             		int modifier = __o_modifier.Default(0);
-            	HX_STACKFRAME(&_hx_pos_cef4a471e9b9c478_759_new)
-HXLINE( 760)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->type = ( (int)(type) );
-HXLINE( 761)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->windowID = windowID;
-HXLINE( 762)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->keyCode = keyCode;
-HXLINE( 763)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->modifier = modifier;
+            	HX_STACKFRAME(&_hx_pos_cef4a471e9b9c478_747_new)
+HXLINE( 748)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->type = ( (int)(type) );
+HXLINE( 749)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->windowID = windowID;
+HXLINE( 750)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->keyCode = keyCode;
+HXLINE( 751)		( ( ::lime::_internal::backend::native::KeyEventInfo)(__this) )->modifier = modifier;
             	}
 		
 			return __this;

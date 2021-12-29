@@ -606,7 +606,7 @@ HXDLIN(  71)		gameVersion = HX_("0.2.4.2",7e,4c,09,19);
             	}
 {
             	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_72_boot)
-HXDLIN(  72)		modVersion = HX_("1.0",b3,56,25,00);
+HXDLIN(  72)		modVersion = HX_("1.1",b4,56,25,00);
             	}
 {
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(0)

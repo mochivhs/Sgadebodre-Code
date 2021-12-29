@@ -5,8 +5,8 @@
 #include <lime/_internal/backend/native/KeyEventInfo.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_cef4a471e9b9c478_759_new,"lime._internal.backend.native.KeyEventInfo","new",0x84b8978d,"lime._internal.backend.native.KeyEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",759,0xc1eba895)
-HX_LOCAL_STACK_FRAME(_hx_pos_cef4a471e9b9c478_768_clone,"lime._internal.backend.native.KeyEventInfo","clone",0x44e9bfca,"lime._internal.backend.native.KeyEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",768,0xc1eba895)
+HX_DEFINE_STACK_FRAME(_hx_pos_cef4a471e9b9c478_747_new,"lime._internal.backend.native.KeyEventInfo","new",0x84b8978d,"lime._internal.backend.native.KeyEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",747,0xc1eba895)
+HX_LOCAL_STACK_FRAME(_hx_pos_cef4a471e9b9c478_756_clone,"lime._internal.backend.native.KeyEventInfo","clone",0x44e9bfca,"lime._internal.backend.native.KeyEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",756,0xc1eba895)
 namespace lime{
 namespace _internal{
 namespace backend{
@@ -16,11 +16,11 @@ void KeyEventInfo_obj::__construct( ::Dynamic type,::hx::Null< int >  __o_window
             		int windowID = __o_windowID.Default(0);
             		int keyCode = __o_keyCode.Default(0);
             		int modifier = __o_modifier.Default(0);
-            	HX_STACKFRAME(&_hx_pos_cef4a471e9b9c478_759_new)
-HXLINE( 760)		this->type = ( (int)(type) );
-HXLINE( 761)		this->windowID = windowID;
-HXLINE( 762)		this->keyCode = keyCode;
-HXLINE( 763)		this->modifier = modifier;
+            	HX_STACKFRAME(&_hx_pos_cef4a471e9b9c478_747_new)
+HXLINE( 748)		this->type = ( (int)(type) );
+HXLINE( 749)		this->windowID = windowID;
+HXLINE( 750)		this->keyCode = keyCode;
+HXLINE( 751)		this->modifier = modifier;
             	}
 
 Dynamic KeyEventInfo_obj::__CreateEmpty() { return new KeyEventInfo_obj; }
@@ -39,8 +39,8 @@ bool KeyEventInfo_obj::_hx_isInstanceOf(int inClassId) {
 }
 
  ::lime::_internal::backend::native::KeyEventInfo KeyEventInfo_obj::clone(){
-            	HX_GC_STACKFRAME(&_hx_pos_cef4a471e9b9c478_768_clone)
-HXDLIN( 768)		return  ::lime::_internal::backend::native::KeyEventInfo_obj::__alloc( HX_CTX ,this->type,this->windowID,this->keyCode,this->modifier);
+            	HX_GC_STACKFRAME(&_hx_pos_cef4a471e9b9c478_756_clone)
+HXDLIN( 756)		return  ::lime::_internal::backend::native::KeyEventInfo_obj::__alloc( HX_CTX ,this->type,this->windowID,this->keyCode,this->modifier);
             	}
 
 

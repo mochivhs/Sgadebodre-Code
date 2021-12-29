@@ -5,16 +5,16 @@
 #include <lime/_internal/backend/native/RenderEventInfo.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_e2a4e584e1f8ec25_819_new,"lime._internal.backend.native.RenderEventInfo","new",0x4ace2292,"lime._internal.backend.native.RenderEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",819,0xc1eba895)
-HX_LOCAL_STACK_FRAME(_hx_pos_e2a4e584e1f8ec25_824_clone,"lime._internal.backend.native.RenderEventInfo","clone",0xe3bbd60f,"lime._internal.backend.native.RenderEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",824,0xc1eba895)
+HX_DEFINE_STACK_FRAME(_hx_pos_e2a4e584e1f8ec25_807_new,"lime._internal.backend.native.RenderEventInfo","new",0x4ace2292,"lime._internal.backend.native.RenderEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",807,0xc1eba895)
+HX_LOCAL_STACK_FRAME(_hx_pos_e2a4e584e1f8ec25_812_clone,"lime._internal.backend.native.RenderEventInfo","clone",0xe3bbd60f,"lime._internal.backend.native.RenderEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",812,0xc1eba895)
 namespace lime{
 namespace _internal{
 namespace backend{
 namespace native{
 
 void RenderEventInfo_obj::__construct( ::Dynamic type){
-            	HX_STACKFRAME(&_hx_pos_e2a4e584e1f8ec25_819_new)
-HXDLIN( 819)		this->type = ( (int)(type) );
+            	HX_STACKFRAME(&_hx_pos_e2a4e584e1f8ec25_807_new)
+HXDLIN( 807)		this->type = ( (int)(type) );
             	}
 
 Dynamic RenderEventInfo_obj::__CreateEmpty() { return new RenderEventInfo_obj; }
@@ -33,8 +33,8 @@ bool RenderEventInfo_obj::_hx_isInstanceOf(int inClassId) {
 }
 
  ::lime::_internal::backend::native::RenderEventInfo RenderEventInfo_obj::clone(){
-            	HX_GC_STACKFRAME(&_hx_pos_e2a4e584e1f8ec25_824_clone)
-HXDLIN( 824)		return  ::lime::_internal::backend::native::RenderEventInfo_obj::__alloc( HX_CTX ,this->type);
+            	HX_GC_STACKFRAME(&_hx_pos_e2a4e584e1f8ec25_812_clone)
+HXDLIN( 812)		return  ::lime::_internal::backend::native::RenderEventInfo_obj::__alloc( HX_CTX ,this->type);
             	}
 
 

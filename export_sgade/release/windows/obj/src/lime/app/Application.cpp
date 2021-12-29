@@ -226,7 +226,7 @@ bool Application_obj::_hx_isInstanceOf(int inClassId) {
 
 void Application_obj::__init__(){
             	HX_STACKFRAME(&_hx_pos_aca430172aa84436_81___init__)
-HXDLIN(  81)		 ::Dynamic init = ::hx::ClassOf< ::lime::_internal::backend::native::NativeApplication >();
+HXDLIN(  81)		 ::Dynamic _init = ::hx::ClassOf< ::lime::_internal::backend::native::NativeApplication >();
             	}
 
 

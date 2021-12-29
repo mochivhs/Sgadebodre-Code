@@ -160,11 +160,11 @@ static const int _hx_array_data_7175bb1d_26[] = {
 static const int _hx_array_data_7175bb1d_27[] = {
 	(int)8,(int)10,(int)12,(int)14,
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_539_flipLeftRight,"gameObjects.Character","flipLeftRight",0x00e698d7,"gameObjects.Character.flipLeftRight","gameObjects/Character.hx",539,0x19a01542)
-HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_560_update,"gameObjects.Character","update",0x2b1f6f3a,"gameObjects.Character.update","gameObjects/Character.hx",560,0x19a01542)
-HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_605_dance,"gameObjects.Character","dance",0x93d08b22,"gameObjects.Character.dance","gameObjects/Character.hx",605,0x19a01542)
-HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_632_playAnim,"gameObjects.Character","playAnim",0x7dd04196,"gameObjects.Character.playAnim","gameObjects/Character.hx",632,0x19a01542)
-HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_648_simplifyCharacter,"gameObjects.Character","simplifyCharacter",0x065f6dcf,"gameObjects.Character.simplifyCharacter","gameObjects/Character.hx",648,0x19a01542)
+HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_549_flipLeftRight,"gameObjects.Character","flipLeftRight",0x00e698d7,"gameObjects.Character.flipLeftRight","gameObjects/Character.hx",549,0x19a01542)
+HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_570_update,"gameObjects.Character","update",0x2b1f6f3a,"gameObjects.Character.update","gameObjects/Character.hx",570,0x19a01542)
+HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_615_dance,"gameObjects.Character","dance",0x93d08b22,"gameObjects.Character.dance","gameObjects/Character.hx",615,0x19a01542)
+HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_642_playAnim,"gameObjects.Character","playAnim",0x7dd04196,"gameObjects.Character.playAnim","gameObjects/Character.hx",642,0x19a01542)
+HX_LOCAL_STACK_FRAME(_hx_pos_d07ef0c135db2bf5_658_simplifyCharacter,"gameObjects.Character","simplifyCharacter",0x065f6dcf,"gameObjects.Character.simplifyCharacter","gameObjects/Character.hx",658,0x19a01542)
 namespace gameObjects{
 
 void Character_obj::__construct(Float x,Float y,::String __o_character, ::Dynamic __o_isPlayer){
@@ -173,7 +173,7 @@ void Character_obj::__construct(Float x,Float y,::String __o_character, ::Dynami
             		 ::Dynamic isPlayer = __o_isPlayer;
             		if (::hx::IsNull(__o_isPlayer)) isPlayer = false;
             	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_20_new)
-HXLINE( 598)		this->danced = false;
+HXLINE( 608)		this->danced = false;
 HXLINE(  31)		this->holdTimer = ((Float)0);
 HXLINE(  29)		this->curCharacter = HX_("bf",c4,55,00,00);
 HXLINE(  28)		this->isPlayer = false;
@@ -218,142 +218,142 @@ HXLINE(  44)		 ::flixel::graphics::frames::FlxAtlasFrames tex;
 HXLINE(  45)		this->set_antialiasing(true);
 HXLINE(  47)		::String _hx_switch_0 = this->curCharacter;
             		if (  (_hx_switch_0==HX_("bf",c4,55,00,00)) ){
-HXLINE( 246)			::String library = null();
-HXDLIN( 246)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BOYFRIEND",65,2c,9c,1b)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 246)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BOYFRIEND",65,2c,9c,1b)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 248)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
-HXLINE( 249)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
-HXLINE( 250)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
-HXLINE( 251)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
-HXLINE( 252)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
-HXLINE( 253)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
-HXLINE( 254)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
-HXLINE( 255)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
-HXLINE( 256)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
-HXLINE( 257)			this->animation->addByPrefix(HX_("hey",dc,42,4f,00),HX_("BF HEY",60,1e,f8,c6),24,false,null(),null());
-HXLINE( 258)			this->animation->addByPrefix(HX_("scared",20,78,2a,3c),HX_("BF idle shaking",53,d0,da,8d),24,null(),null(),null());
-HXLINE( 260)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 262)			this->set_flipX(true);
-HXLINE( 245)			goto _hx_goto_2;
+HXLINE( 256)			::String library = null();
+HXDLIN( 256)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BOYFRIEND",65,2c,9c,1b)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 256)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BOYFRIEND",65,2c,9c,1b)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 258)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
+HXLINE( 259)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
+HXLINE( 260)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
+HXLINE( 261)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
+HXLINE( 262)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
+HXLINE( 263)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
+HXLINE( 264)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
+HXLINE( 265)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
+HXLINE( 266)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
+HXLINE( 267)			this->animation->addByPrefix(HX_("hey",dc,42,4f,00),HX_("BF HEY",60,1e,f8,c6),24,false,null(),null());
+HXLINE( 268)			this->animation->addByPrefix(HX_("scared",20,78,2a,3c),HX_("BF idle shaking",53,d0,da,8d),24,null(),null(),null());
+HXLINE( 270)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 272)			this->set_flipX(true);
+HXLINE( 255)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-car",cb,95,e2,07)) ){
-HXLINE( 342)			::String library = null();
-HXDLIN( 342)			::String tex = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfCar",4b,f2,0a,1e)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 342)			 ::flixel::graphics::frames::FlxAtlasFrames tex1 = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfCar",4b,f2,0a,1e)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 343)			this->set_frames(tex1);
-HXLINE( 344)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
-HXLINE( 345)			this->animation->addByIndices(HX_("idlePost",94,71,4c,3f),HX_("BF idle dance",03,fa,cc,7f),::Array_obj< int >::fromData( _hx_array_data_7175bb1d_5,7),HX_("",00,00,00,00),24,true,null(),null());
-HXLINE( 346)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
-HXLINE( 347)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
-HXLINE( 348)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
-HXLINE( 349)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
-HXLINE( 350)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
-HXLINE( 351)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
-HXLINE( 352)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
-HXLINE( 353)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
-HXLINE( 355)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 357)			this->set_flipX(true);
-HXLINE( 341)			goto _hx_goto_2;
+HXLINE( 352)			::String library = null();
+HXDLIN( 352)			::String tex = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfCar",4b,f2,0a,1e)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 352)			 ::flixel::graphics::frames::FlxAtlasFrames tex1 = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfCar",4b,f2,0a,1e)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 353)			this->set_frames(tex1);
+HXLINE( 354)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
+HXLINE( 355)			this->animation->addByIndices(HX_("idlePost",94,71,4c,3f),HX_("BF idle dance",03,fa,cc,7f),::Array_obj< int >::fromData( _hx_array_data_7175bb1d_5,7),HX_("",00,00,00,00),24,true,null(),null());
+HXLINE( 356)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
+HXLINE( 357)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
+HXLINE( 358)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
+HXLINE( 359)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
+HXLINE( 360)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
+HXLINE( 361)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
+HXLINE( 362)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
+HXLINE( 363)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
+HXLINE( 365)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 367)			this->set_flipX(true);
+HXLINE( 351)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-christmas",79,02,f4,24)) ){
-HXLINE( 325)			::String library = null();
-HXDLIN( 325)			::String tex = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfChristmas",f9,be,84,ca)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 325)			 ::flixel::graphics::frames::FlxAtlasFrames tex1 = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfChristmas",f9,be,84,ca)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 326)			this->set_frames(tex1);
-HXLINE( 327)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
-HXLINE( 328)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
-HXLINE( 329)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
-HXLINE( 330)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
-HXLINE( 331)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
-HXLINE( 332)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
-HXLINE( 333)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
-HXLINE( 334)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
-HXLINE( 335)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
-HXLINE( 336)			this->animation->addByPrefix(HX_("hey",dc,42,4f,00),HX_("BF HEY",60,1e,f8,c6),24,false,null(),null());
-HXLINE( 338)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 340)			this->set_flipX(true);
-HXLINE( 324)			goto _hx_goto_2;
+HXLINE( 335)			::String library = null();
+HXDLIN( 335)			::String tex = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfChristmas",f9,be,84,ca)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 335)			 ::flixel::graphics::frames::FlxAtlasFrames tex1 = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfChristmas",f9,be,84,ca)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 336)			this->set_frames(tex1);
+HXLINE( 337)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance",03,fa,cc,7f),24,false,null(),null());
+HXLINE( 338)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
+HXLINE( 339)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
+HXLINE( 340)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
+HXLINE( 341)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
+HXLINE( 342)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
+HXLINE( 343)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
+HXLINE( 344)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
+HXLINE( 345)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
+HXLINE( 346)			this->animation->addByPrefix(HX_("hey",dc,42,4f,00),HX_("BF HEY",60,1e,f8,c6),24,false,null(),null());
+HXLINE( 348)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 350)			this->set_flipX(true);
+HXLINE( 334)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-dead",0d,ad,0c,df)) ){
-HXLINE( 288)			::String library = null();
-HXDLIN( 288)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BF_DEATH",5e,7c,40,f4)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 288)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BF_DEATH",5e,7c,40,f4)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 290)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF dies",0f,cb,bf,64),24,false,null(),null());
-HXLINE( 291)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("BF Dead Loop",04,f4,36,2f),24,true,null(),null());
-HXLINE( 292)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("BF Dead confirm",80,6b,f9,23),24,false,null(),null());
-HXLINE( 294)			this->playAnim(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
-HXLINE( 296)			this->set_flipX(true);
-HXLINE( 287)			goto _hx_goto_2;
+HXLINE( 298)			::String library = null();
+HXDLIN( 298)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BF_DEATH",5e,7c,40,f4)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 298)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/BF_DEATH",5e,7c,40,f4)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 300)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF dies",0f,cb,bf,64),24,false,null(),null());
+HXLINE( 301)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("BF Dead Loop",04,f4,36,2f),24,true,null(),null());
+HXLINE( 302)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("BF Dead confirm",80,6b,f9,23),24,false,null(),null());
+HXLINE( 304)			this->playAnim(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
+HXLINE( 306)			this->set_flipX(true);
+HXLINE( 297)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-holding-gf",92,81,6a,17)) ){
-HXLINE( 299)			::String library = null();
-HXDLIN( 299)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfAndGF",ad,96,24,ce)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 299)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfAndGF",ad,96,24,ce)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 301)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance w gf",65,71,8e,e3),24,false,null(),null());
-HXLINE( 302)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
-HXLINE( 303)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
-HXLINE( 304)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
-HXLINE( 305)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
-HXLINE( 306)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
-HXLINE( 307)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
-HXLINE( 308)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
-HXLINE( 309)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
-HXLINE( 311)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 313)			this->set_flipX(true);
-HXLINE( 298)			goto _hx_goto_2;
+HXLINE( 309)			::String library = null();
+HXDLIN( 309)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfAndGF",ad,96,24,ce)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 309)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfAndGF",ad,96,24,ce)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 311)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF idle dance w gf",65,71,8e,e3),24,false,null(),null());
+HXLINE( 312)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF NOTE UP0",23,e8,67,d4),24,false,null(),null());
+HXLINE( 313)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF NOTE LEFT0",77,e0,7c,76),24,false,null(),null());
+HXLINE( 314)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF NOTE RIGHT0",06,3f,26,eb),24,false,null(),null());
+HXLINE( 315)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF NOTE DOWN0",bc,3f,f1,e1),24,false,null(),null());
+HXLINE( 316)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF NOTE UP MISS",8f,08,36,ae),24,false,null(),null());
+HXLINE( 317)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF NOTE LEFT MISS",e3,ba,cf,a7),24,false,null(),null());
+HXLINE( 318)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF NOTE RIGHT MISS",f2,0c,cd,25),24,false,null(),null());
+HXLINE( 319)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF NOTE DOWN MISS",a8,a0,05,a9),24,false,null(),null());
+HXLINE( 321)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 323)			this->set_flipX(true);
+HXLINE( 308)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-holding-gf-dead",7f,f6,6a,5d)) ){
-HXLINE( 316)			::String library = null();
-HXDLIN( 316)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfHoldingGF-DEAD",58,d3,6a,ae)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 316)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfHoldingGF-DEAD",58,d3,6a,ae)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 318)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF Dies with GF",08,9a,cd,d3),24,false,null(),null());
-HXLINE( 319)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("BF Dead with GF Loop",8b,65,0b,34),24,true,null(),null());
-HXLINE( 320)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("RETRY confirm holding gf",14,e2,27,ab),24,false,null(),null());
-HXLINE( 322)			this->playAnim(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
-HXLINE( 315)			goto _hx_goto_2;
+HXLINE( 326)			::String library = null();
+HXDLIN( 326)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfHoldingGF-DEAD",58,d3,6a,ae)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 326)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfHoldingGF-DEAD",58,d3,6a,ae)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 328)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF Dies with GF",08,9a,cd,d3),24,false,null(),null());
+HXLINE( 329)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("BF Dead with GF Loop",8b,65,0b,34),24,true,null(),null());
+HXLINE( 330)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("RETRY confirm holding gf",14,e2,27,ab),24,false,null(),null());
+HXLINE( 332)			this->playAnim(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
+HXLINE( 325)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-pixel",fd,03,90,37)) ){
-HXLINE( 359)			::String library = null();
-HXDLIN( 359)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixel",7d,80,e8,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 359)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixel",7d,80,e8,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 360)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF IDLE",f0,de,ca,52),24,false,null(),null());
-HXLINE( 361)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF UP NOTE",7b,9d,4e,d3),24,false,null(),null());
-HXLINE( 362)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF LEFT NOTE",4f,b9,34,d9),24,false,null(),null());
-HXLINE( 363)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF RIGHT NOTE",b2,df,15,96),24,false,null(),null());
-HXLINE( 364)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF DOWN NOTE",14,9f,6a,da),24,false,null(),null());
-HXLINE( 365)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF UP MISS",85,d8,a0,d2),24,false,null(),null());
-HXLINE( 366)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF LEFT MISS",59,f4,86,d8),24,false,null(),null());
-HXLINE( 367)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF RIGHT MISS",bc,1a,68,95),24,false,null(),null());
-HXLINE( 368)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF DOWN MISS",1e,da,bc,d9),24,false,null(),null());
-HXLINE( 370)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
-HXLINE( 371)			this->updateHitbox();
-HXLINE( 373)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 375)			{
-HXLINE( 375)				 ::gameObjects::Character _g = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 375)				_g->set_width((_g->get_width() - ( (Float)(100) )));
+HXLINE( 369)			::String library = null();
+HXDLIN( 369)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixel",7d,80,e8,6d)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 369)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixel",7d,80,e8,6d)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 370)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("BF IDLE",f0,de,ca,52),24,false,null(),null());
+HXLINE( 371)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF UP NOTE",7b,9d,4e,d3),24,false,null(),null());
+HXLINE( 372)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("BF LEFT NOTE",4f,b9,34,d9),24,false,null(),null());
+HXLINE( 373)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("BF RIGHT NOTE",b2,df,15,96),24,false,null(),null());
+HXLINE( 374)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("BF DOWN NOTE",14,9f,6a,da),24,false,null(),null());
+HXLINE( 375)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("BF UP MISS",85,d8,a0,d2),24,false,null(),null());
+HXLINE( 376)			this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("BF LEFT MISS",59,f4,86,d8),24,false,null(),null());
+HXLINE( 377)			this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("BF RIGHT MISS",bc,1a,68,95),24,false,null(),null());
+HXLINE( 378)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("BF DOWN MISS",1e,da,bc,d9),24,false,null(),null());
+HXLINE( 380)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
+HXLINE( 381)			this->updateHitbox();
+HXLINE( 383)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 385)			{
+HXLINE( 385)				 ::gameObjects::Character _g = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 385)				_g->set_width((_g->get_width() - ( (Float)(100) )));
             			}
-HXLINE( 376)			{
-HXLINE( 376)				 ::gameObjects::Character _g1 = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 376)				_g1->set_height((_g1->get_height() - ( (Float)(100) )));
+HXLINE( 386)			{
+HXLINE( 386)				 ::gameObjects::Character _g1 = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 386)				_g1->set_height((_g1->get_height() - ( (Float)(100) )));
             			}
-HXLINE( 378)			this->set_antialiasing(false);
-HXLINE( 380)			this->set_flipX(true);
-HXLINE( 358)			goto _hx_goto_2;
+HXLINE( 388)			this->set_antialiasing(false);
+HXLINE( 390)			this->set_flipX(true);
+HXLINE( 368)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("bf-pixel-dead",34,d0,3d,c4)) ){
-HXLINE( 382)			::String library = null();
-HXDLIN( 382)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixelsDEAD",fa,66,1f,36)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 382)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixelsDEAD",fa,66,1f,36)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 383)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF Dies pixel",d5,56,ac,77),24,false,null(),null());
-HXLINE( 384)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF Dies pixel",d5,56,ac,77),24,false,null(),null());
-HXLINE( 385)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("Retry Loop",5c,76,15,41),24,true,null(),null());
-HXLINE( 386)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("RETRY CONFIRM",08,8c,5f,fd),24,false,null(),null());
-HXLINE( 387)			this->animation->play(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
-HXLINE( 390)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
-HXLINE( 391)			this->updateHitbox();
-HXLINE( 392)			this->set_antialiasing(false);
-HXLINE( 393)			this->set_flipX(true);
-HXLINE( 381)			goto _hx_goto_2;
+HXLINE( 392)			::String library = null();
+HXDLIN( 392)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixelsDEAD",fa,66,1f,36)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 392)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/bfPixelsDEAD",fa,66,1f,36)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 393)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("BF Dies pixel",d5,56,ac,77),24,false,null(),null());
+HXLINE( 394)			this->animation->addByPrefix(HX_("firstDeath",e4,d8,fc,14),HX_("BF Dies pixel",d5,56,ac,77),24,false,null(),null());
+HXLINE( 395)			this->animation->addByPrefix(HX_("deathLoop",b8,0b,79,2e),HX_("Retry Loop",5c,76,15,41),24,true,null(),null());
+HXLINE( 396)			this->animation->addByPrefix(HX_("deathConfirm",2c,44,2b,12),HX_("RETRY CONFIRM",08,8c,5f,fd),24,false,null(),null());
+HXLINE( 397)			this->animation->play(HX_("firstDeath",e4,d8,fc,14),null(),null(),null());
+HXLINE( 400)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
+HXLINE( 401)			this->updateHitbox();
+HXLINE( 402)			this->set_antialiasing(false);
+HXLINE( 403)			this->set_flipX(true);
+HXLINE( 391)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("dad",47,36,4c,00)) ){
 HXLINE( 124)			::String library = null();
@@ -460,97 +460,97 @@ HXLINE( 161)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
 HXLINE( 146)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("mom-car",52,e6,f7,f6)) ){
-HXLINE( 183)			::String library = null();
-HXDLIN( 183)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/momCar",0e,64,bd,db)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 183)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/momCar",0e,64,bd,db)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 184)			this->set_frames(tex);
-HXLINE( 186)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Mom Idle",c9,88,40,6e),24,false,null(),null());
-HXLINE( 187)			this->animation->addByIndices(HX_("idlePost",94,71,4c,3f),HX_("Mom Idle",c9,88,40,6e),::Array_obj< int >::fromData( _hx_array_data_7175bb1d_25,4),HX_("",00,00,00,00),24,true,null(),null());
-HXLINE( 188)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Mom Up Pose",c1,4d,e9,52),24,false,null(),null());
-HXLINE( 189)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("MOM DOWN POSE",1a,4b,70,b3),24,false,null(),null());
-HXLINE( 190)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Mom Left Pose",55,8d,76,2a),24,false,null(),null());
-HXLINE( 193)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Mom Pose Left",81,c8,c4,cc),24,false,null(),null());
-HXLINE( 195)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 182)			goto _hx_goto_2;
+HXLINE( 193)			::String library = null();
+HXDLIN( 193)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/momCar",0e,64,bd,db)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 193)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/momCar",0e,64,bd,db)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 194)			this->set_frames(tex);
+HXLINE( 196)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Mom Idle",c9,88,40,6e),24,false,null(),null());
+HXLINE( 197)			this->animation->addByIndices(HX_("idlePost",94,71,4c,3f),HX_("Mom Idle",c9,88,40,6e),::Array_obj< int >::fromData( _hx_array_data_7175bb1d_25,4),HX_("",00,00,00,00),24,true,null(),null());
+HXLINE( 198)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Mom Up Pose",c1,4d,e9,52),24,false,null(),null());
+HXLINE( 199)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("MOM DOWN POSE",1a,4b,70,b3),24,false,null(),null());
+HXLINE( 200)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Mom Left Pose",55,8d,76,2a),24,false,null(),null());
+HXLINE( 203)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Mom Pose Left",81,c8,c4,cc),24,false,null(),null());
+HXLINE( 205)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 192)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("monster",1a,54,b0,b8)) ){
-HXLINE( 197)			::String library = null();
-HXDLIN( 197)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Monster_Assets",8d,70,88,43)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 197)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Monster_Assets",8d,70,88,43)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 198)			this->set_frames(tex);
-HXLINE( 199)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("monster idle",da,c4,6c,db),24,false,null(),null());
-HXLINE( 200)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("monster up note",d1,99,1b,31),24,false,null(),null());
-HXLINE( 201)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("monster down",28,16,27,d8),24,false,null(),null());
-HXLINE( 202)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Monster Right note",3c,fd,2d,0e),24,false,null(),null());
-HXLINE( 203)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Monster left note",05,1b,dc,68),24,false,null(),null());
-HXLINE( 205)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 196)			goto _hx_goto_2;
-            		}
-            		if (  (_hx_switch_0==HX_("monster-christmas",4f,88,85,27)) ){
 HXLINE( 207)			::String library = null();
-HXDLIN( 207)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/monsterChristmas",4d,4c,ad,fb)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 207)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/monsterChristmas",4d,4c,ad,fb)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXDLIN( 207)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Monster_Assets",8d,70,88,43)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 207)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Monster_Assets",8d,70,88,43)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
 HXLINE( 208)			this->set_frames(tex);
 HXLINE( 209)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("monster idle",da,c4,6c,db),24,false,null(),null());
 HXLINE( 210)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("monster up note",d1,99,1b,31),24,false,null(),null());
 HXLINE( 211)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("monster down",28,16,27,d8),24,false,null(),null());
-HXLINE( 212)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Monster left note",05,1b,dc,68),24,false,null(),null());
-HXLINE( 213)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Monster Right note",3c,fd,2d,0e),24,false,null(),null());
+HXLINE( 212)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Monster Right note",3c,fd,2d,0e),24,false,null(),null());
+HXLINE( 213)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Monster left note",05,1b,dc,68),24,false,null(),null());
 HXLINE( 215)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
 HXLINE( 206)			goto _hx_goto_2;
             		}
-            		if (  (_hx_switch_0==HX_("parents-christmas",fe,94,c5,32)) ){
-HXLINE( 438)			::String library = null();
-HXDLIN( 438)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/mom_dad_christmas_assets",91,39,44,07)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 438)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/mom_dad_christmas_assets",91,39,44,07)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 439)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Parent Christmas Idle",c8,04,64,10),24,false,null(),null());
-HXLINE( 440)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Parent Up Note Dad",88,99,f7,ad),24,false,null(),null());
-HXLINE( 441)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Parent Down Note Dad",21,a5,93,34),24,false,null(),null());
-HXLINE( 442)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Parent Left Note Dad",dc,f8,16,c4),24,false,null(),null());
-HXLINE( 443)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Parent Right Note Dad",13,46,28,52),24,false,null(),null());
-HXLINE( 445)			this->animation->addByPrefix(HX_("singUP-alt",86,62,b4,5f),HX_("Parent Up Note Mom",0c,7a,fe,ad),24,false,null(),null());
-HXLINE( 447)			this->animation->addByPrefix(HX_("singDOWN-alt",cd,29,35,ba),HX_("Parent Down Note Mom",a5,85,9a,34),24,false,null(),null());
-HXLINE( 448)			this->animation->addByPrefix(HX_("singLEFT-alt",f2,6f,48,8c),HX_("Parent Left Note Mom",60,d9,1d,c4),24,false,null(),null());
-HXLINE( 449)			this->animation->addByPrefix(HX_("singRIGHT-alt",a9,0c,12,b9),HX_("Parent Right Note Mom",97,26,2f,52),24,false,null(),null());
-HXLINE( 451)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 437)			goto _hx_goto_2;
-            		}
-            		if (  (_hx_switch_0==HX_("pico",e5,e8,57,4a)) ){
+            		if (  (_hx_switch_0==HX_("monster-christmas",4f,88,85,27)) ){
 HXLINE( 217)			::String library = null();
-HXDLIN( 217)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Pico_FNF_assetss",da,a0,90,17)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 217)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Pico_FNF_assetss",da,a0,90,17)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXDLIN( 217)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/monsterChristmas",4d,4c,ad,fb)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 217)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/monsterChristmas",4d,4c,ad,fb)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
 HXLINE( 218)			this->set_frames(tex);
-HXLINE( 219)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Pico Idle Dance",62,48,dd,f6),24,false,null(),null());
-HXLINE( 220)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("pico Up note0",34,b3,8f,aa),24,false,null(),null());
-HXLINE( 221)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Pico Down Note0",fb,e0,7b,fc),24,false,null(),null());
-HXLINE( 222)			if (this->isPlayer) {
-HXLINE( 224)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Pico NOTE LEFT0",d6,ba,ae,63),24,false,null(),null());
-HXLINE( 225)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Pico Note Right0",a7,9f,6f,99),24,false,null(),null());
-HXLINE( 226)				this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("Pico Note Right Miss",33,36,e2,57),24,false,null(),null());
-HXLINE( 227)				this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("Pico NOTE LEFT miss",c2,e8,46,a4),24,false,null(),null());
-            			}
-            			else {
-HXLINE( 232)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Pico Note Right0",a7,9f,6f,99),24,false,null(),null());
-HXLINE( 233)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Pico NOTE LEFT0",d6,ba,ae,63),24,false,null(),null());
-HXLINE( 234)				this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("Pico NOTE LEFT miss",c2,e8,46,a4),24,false,null(),null());
-HXLINE( 235)				this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("Pico Note Right Miss",33,36,e2,57),24,false,null(),null());
-            			}
-HXLINE( 238)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("pico Up note miss",20,68,ae,5a),24,null(),null(),null());
-HXLINE( 239)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("Pico Down Note MISS",67,4d,33,9a),24,null(),null(),null());
-HXLINE( 241)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 243)			this->set_flipX(true);
+HXLINE( 219)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("monster idle",da,c4,6c,db),24,false,null(),null());
+HXLINE( 220)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("monster up note",d1,99,1b,31),24,false,null(),null());
+HXLINE( 221)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("monster down",28,16,27,d8),24,false,null(),null());
+HXLINE( 222)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Monster left note",05,1b,dc,68),24,false,null(),null());
+HXLINE( 223)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Monster Right note",3c,fd,2d,0e),24,false,null(),null());
+HXLINE( 225)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
 HXLINE( 216)			goto _hx_goto_2;
             		}
+            		if (  (_hx_switch_0==HX_("parents-christmas",fe,94,c5,32)) ){
+HXLINE( 448)			::String library = null();
+HXDLIN( 448)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/mom_dad_christmas_assets",91,39,44,07)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 448)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/mom_dad_christmas_assets",91,39,44,07)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 449)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Parent Christmas Idle",c8,04,64,10),24,false,null(),null());
+HXLINE( 450)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Parent Up Note Dad",88,99,f7,ad),24,false,null(),null());
+HXLINE( 451)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Parent Down Note Dad",21,a5,93,34),24,false,null(),null());
+HXLINE( 452)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Parent Left Note Dad",dc,f8,16,c4),24,false,null(),null());
+HXLINE( 453)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Parent Right Note Dad",13,46,28,52),24,false,null(),null());
+HXLINE( 455)			this->animation->addByPrefix(HX_("singUP-alt",86,62,b4,5f),HX_("Parent Up Note Mom",0c,7a,fe,ad),24,false,null(),null());
+HXLINE( 457)			this->animation->addByPrefix(HX_("singDOWN-alt",cd,29,35,ba),HX_("Parent Down Note Mom",a5,85,9a,34),24,false,null(),null());
+HXLINE( 458)			this->animation->addByPrefix(HX_("singLEFT-alt",f2,6f,48,8c),HX_("Parent Left Note Mom",60,d9,1d,c4),24,false,null(),null());
+HXLINE( 459)			this->animation->addByPrefix(HX_("singRIGHT-alt",a9,0c,12,b9),HX_("Parent Right Note Mom",97,26,2f,52),24,false,null(),null());
+HXLINE( 461)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 447)			goto _hx_goto_2;
+            		}
+            		if (  (_hx_switch_0==HX_("pico",e5,e8,57,4a)) ){
+HXLINE( 227)			::String library = null();
+HXDLIN( 227)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Pico_FNF_assetss",da,a0,90,17)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 227)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/Pico_FNF_assetss",da,a0,90,17)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 228)			this->set_frames(tex);
+HXLINE( 229)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Pico Idle Dance",62,48,dd,f6),24,false,null(),null());
+HXLINE( 230)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("pico Up note0",34,b3,8f,aa),24,false,null(),null());
+HXLINE( 231)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Pico Down Note0",fb,e0,7b,fc),24,false,null(),null());
+HXLINE( 232)			if (this->isPlayer) {
+HXLINE( 234)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Pico NOTE LEFT0",d6,ba,ae,63),24,false,null(),null());
+HXLINE( 235)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Pico Note Right0",a7,9f,6f,99),24,false,null(),null());
+HXLINE( 236)				this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("Pico Note Right Miss",33,36,e2,57),24,false,null(),null());
+HXLINE( 237)				this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("Pico NOTE LEFT miss",c2,e8,46,a4),24,false,null(),null());
+            			}
+            			else {
+HXLINE( 242)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Pico Note Right0",a7,9f,6f,99),24,false,null(),null());
+HXLINE( 243)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Pico NOTE LEFT0",d6,ba,ae,63),24,false,null(),null());
+HXLINE( 244)				this->animation->addByPrefix(HX_("singRIGHTmiss",89,cc,65,e3),HX_("Pico NOTE LEFT miss",c2,e8,46,a4),24,false,null(),null());
+HXLINE( 245)				this->animation->addByPrefix(HX_("singLEFTmiss",d2,2f,9c,b6),HX_("Pico Note Right Miss",33,36,e2,57),24,false,null(),null());
+            			}
+HXLINE( 248)			this->animation->addByPrefix(HX_("singUPmiss",66,22,08,8a),HX_("pico Up note miss",20,68,ae,5a),24,null(),null(),null());
+HXLINE( 249)			this->animation->addByPrefix(HX_("singDOWNmiss",ad,e9,88,e4),HX_("Pico Down Note MISS",67,4d,33,9a),24,null(),null(),null());
+HXLINE( 251)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 253)			this->set_flipX(true);
+HXLINE( 226)			goto _hx_goto_2;
+            		}
             		if (  (_hx_switch_0==HX_("pico-speaker",57,7a,55,5e)) ){
-HXLINE( 468)			::String library = null();
-HXDLIN( 468)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/picoSpeaker",75,ba,55,ad)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 468)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/picoSpeaker",75,ba,55,ad)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 470)			this->animation->addByPrefix(HX_("shoot1",72,21,6a,26),HX_("Pico shoot 1",95,79,46,d7),24,false,null(),null());
-HXLINE( 471)			this->animation->addByPrefix(HX_("shoot2",73,21,6a,26),HX_("Pico shoot 2",96,79,46,d7),24,false,null(),null());
-HXLINE( 472)			this->animation->addByPrefix(HX_("shoot3",74,21,6a,26),HX_("Pico shoot 3",97,79,46,d7),24,false,null(),null());
-HXLINE( 473)			this->animation->addByPrefix(HX_("shoot4",75,21,6a,26),HX_("Pico shoot 4",98,79,46,d7),24,false,null(),null());
-HXLINE( 475)			this->playAnim(HX_("shoot1",72,21,6a,26),null(),null(),null());
-HXLINE( 467)			goto _hx_goto_2;
+HXLINE( 478)			::String library = null();
+HXDLIN( 478)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/picoSpeaker",75,ba,55,ad)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 478)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/picoSpeaker",75,ba,55,ad)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 480)			this->animation->addByPrefix(HX_("shoot1",72,21,6a,26),HX_("Pico shoot 1",95,79,46,d7),24,false,null(),null());
+HXLINE( 481)			this->animation->addByPrefix(HX_("shoot2",73,21,6a,26),HX_("Pico shoot 2",96,79,46,d7),24,false,null(),null());
+HXLINE( 482)			this->animation->addByPrefix(HX_("shoot3",74,21,6a,26),HX_("Pico shoot 3",97,79,46,d7),24,false,null(),null());
+HXLINE( 483)			this->animation->addByPrefix(HX_("shoot4",75,21,6a,26),HX_("Pico shoot 4",98,79,46,d7),24,false,null(),null());
+HXLINE( 485)			this->playAnim(HX_("shoot1",72,21,6a,26),null(),null(),null());
+HXLINE( 477)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("pisssgadebodre",b5,58,c0,78)) ){
 HXLINE( 174)			::String library = null();
@@ -562,33 +562,33 @@ HXLINE( 179)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
 HXLINE( 172)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("senpai",3c,df,8d,6b)) ){
-HXLINE( 396)			::String library = null();
-HXDLIN( 396)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 396)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 397)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Senpai Idle",78,62,c5,a9),24,false,null(),null());
-HXLINE( 398)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("SENPAI UP NOTE",f3,26,c1,c4),24,false,null(),null());
-HXLINE( 399)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("SENPAI LEFT NOTE",c7,90,76,f3),24,false,null(),null());
-HXLINE( 400)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("SENPAI RIGHT NOTE",3a,91,70,75),24,false,null(),null());
-HXLINE( 401)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("SENPAI DOWN NOTE",8c,76,ac,f4),24,false,null(),null());
-HXLINE( 403)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 405)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
-HXLINE( 406)			this->updateHitbox();
-HXLINE( 408)			this->set_antialiasing(false);
-HXLINE( 395)			goto _hx_goto_2;
+HXLINE( 406)			::String library = null();
+HXDLIN( 406)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 406)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 407)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Senpai Idle",78,62,c5,a9),24,false,null(),null());
+HXLINE( 408)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("SENPAI UP NOTE",f3,26,c1,c4),24,false,null(),null());
+HXLINE( 409)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("SENPAI LEFT NOTE",c7,90,76,f3),24,false,null(),null());
+HXLINE( 410)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("SENPAI RIGHT NOTE",3a,91,70,75),24,false,null(),null());
+HXLINE( 411)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("SENPAI DOWN NOTE",8c,76,ac,f4),24,false,null(),null());
+HXLINE( 413)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 415)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
+HXLINE( 416)			this->updateHitbox();
+HXLINE( 418)			this->set_antialiasing(false);
+HXLINE( 405)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("senpai-angry",10,7a,b8,25)) ){
-HXLINE( 410)			::String library = null();
-HXDLIN( 410)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 410)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 411)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Angry Senpai Idle",d9,cc,b4,52),24,false,null(),null());
-HXLINE( 412)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Angry Senpai UP NOTE",52,97,34,df),24,false,null(),null());
-HXLINE( 413)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Angry Senpai LEFT NOTE",e6,16,ee,25),24,false,null(),null());
-HXLINE( 414)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Angry Senpai RIGHT NOTE",3b,66,8e,6b),24,false,null(),null());
-HXLINE( 415)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Angry Senpai DOWN NOTE",ab,fc,23,27),24,false,null(),null());
-HXLINE( 417)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
-HXLINE( 418)			this->updateHitbox();
-HXLINE( 420)			this->set_antialiasing(false);
-HXLINE( 409)			goto _hx_goto_2;
+HXLINE( 420)			::String library = null();
+HXDLIN( 420)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 420)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/senpai",41,1d,ab,80)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 421)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Angry Senpai Idle",d9,cc,b4,52),24,false,null(),null());
+HXLINE( 422)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Angry Senpai UP NOTE",52,97,34,df),24,false,null(),null());
+HXLINE( 423)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Angry Senpai LEFT NOTE",e6,16,ee,25),24,false,null(),null());
+HXLINE( 424)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Angry Senpai RIGHT NOTE",3b,66,8e,6b),24,false,null(),null());
+HXLINE( 425)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Angry Senpai DOWN NOTE",ab,fc,23,27),24,false,null(),null());
+HXLINE( 427)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
+HXLINE( 428)			this->updateHitbox();
+HXLINE( 430)			this->set_antialiasing(false);
+HXLINE( 419)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("sgadebodre",9c,f8,0f,44)) ){
 HXLINE( 165)			::String library = null();
@@ -599,20 +599,29 @@ HXLINE( 167)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("idle",1
 HXLINE( 170)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
 HXLINE( 163)			goto _hx_goto_2;
             		}
+            		if (  (_hx_switch_0==HX_("sgadebodreXmas",e3,47,6c,64)) ){
+HXLINE( 184)			::String library = null();
+HXDLIN( 184)			::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/sgadebodre_assets_christmas",a4,df,7d,98)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 184)			tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/sgadebodre_assets_christmas",a4,df,7d,98)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 185)			this->set_frames(tex);
+HXLINE( 186)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("idle",14,a7,b3,45),24,false,null(),null());
+HXLINE( 189)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 182)			goto _hx_goto_2;
+            		}
             		if (  (_hx_switch_0==HX_("spirit",31,bb,a9,bd)) ){
-HXLINE( 423)			::String library = null();
-HXDLIN( 423)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/spirit",36,f9,c6,d2)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 423)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSpriteSheetPacker(_hx_tmp,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/spirit",36,f9,c6,d2)) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 424)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("idle spirit_",02,2f,37,04),24,false,null(),null());
-HXLINE( 425)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("up_",a4,29,59,00),24,false,null(),null());
-HXLINE( 426)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("right_",03,55,26,4e),24,false,null(),null());
-HXLINE( 427)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("left_",78,fe,56,72),24,false,null(),null());
-HXLINE( 428)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("spirit down_",8e,9f,fa,ae),24,false,null(),null());
-HXLINE( 430)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
-HXLINE( 431)			this->updateHitbox();
-HXLINE( 433)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 435)			this->set_antialiasing(false);
-HXLINE( 422)			goto _hx_goto_2;
+HXLINE( 433)			::String library = null();
+HXDLIN( 433)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/spirit",36,f9,c6,d2)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 433)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSpriteSheetPacker(_hx_tmp,::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/spirit",36,f9,c6,d2)) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 434)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("idle spirit_",02,2f,37,04),24,false,null(),null());
+HXLINE( 435)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("up_",a4,29,59,00),24,false,null(),null());
+HXLINE( 436)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("right_",03,55,26,4e),24,false,null(),null());
+HXLINE( 437)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("left_",78,fe,56,72),24,false,null(),null());
+HXLINE( 438)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("spirit down_",8e,9f,fa,ae),24,false,null(),null());
+HXLINE( 440)			this->setGraphicSize(::Std_obj::_hx_int((this->get_width() * ( (Float)(6) ))),null());
+HXLINE( 441)			this->updateHitbox();
+HXLINE( 443)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 445)			this->set_antialiasing(false);
+HXLINE( 432)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("spooky",eb,bd,9e,c1)) ){
 HXLINE( 134)			::String library = null();
@@ -630,105 +639,105 @@ HXLINE( 145)			this->playAnim(HX_("danceRight",a9,7f,a6,91),null(),null(),null()
 HXLINE( 133)			goto _hx_goto_2;
             		}
             		if (  (_hx_switch_0==HX_("tankman",f0,7d,78,3d)) ){
-HXLINE( 453)			::String library = null();
-HXDLIN( 453)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/tankmanCaptain",99,2e,62,27)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 453)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/tankmanCaptain",99,2e,62,27)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
-HXLINE( 454)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Tankman Idle Dance instance",5e,b3,f4,09),24,false,null(),null());
-HXLINE( 456)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Tankman UP note instance",4e,a9,f1,77),24,false,null(),null());
-HXLINE( 457)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Tankman Note Left instance",70,7e,5e,c1),24,false,null(),null());
-HXLINE( 458)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Tankman Right Note instance",af,63,97,7f),24,false,null(),null());
-HXLINE( 459)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Tankman DOWN note instance",95,b1,c4,54),24,false,null(),null());
-HXLINE( 461)			this->animation->addByPrefix(HX_("singUP-alt",86,62,b4,5f),HX_("TANKMAN UGH instance",8f,97,b7,fe),24,false,null(),null());
-HXLINE( 462)			this->animation->addByPrefix(HX_("singDOWN-alt",cd,29,35,ba),HX_("PRETTY GOOD tankman instance",1e,65,d0,1f),24,false,null(),null());
-HXLINE( 464)			this->set_flipX(true);
-HXLINE( 465)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 452)			goto _hx_goto_2;
+HXLINE( 463)			::String library = null();
+HXDLIN( 463)			::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/tankmanCaptain",99,2e,62,27)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 463)			this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/tankmanCaptain",99,2e,62,27)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library))));
+HXLINE( 464)			this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Tankman Idle Dance instance",5e,b3,f4,09),24,false,null(),null());
+HXLINE( 466)			this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Tankman UP note instance",4e,a9,f1,77),24,false,null(),null());
+HXLINE( 467)			this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Tankman Note Left instance",70,7e,5e,c1),24,false,null(),null());
+HXLINE( 468)			this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Tankman Right Note instance",af,63,97,7f),24,false,null(),null());
+HXLINE( 469)			this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Tankman DOWN note instance",95,b1,c4,54),24,false,null(),null());
+HXLINE( 471)			this->animation->addByPrefix(HX_("singUP-alt",86,62,b4,5f),HX_("TANKMAN UGH instance",8f,97,b7,fe),24,false,null(),null());
+HXLINE( 472)			this->animation->addByPrefix(HX_("singDOWN-alt",cd,29,35,ba),HX_("PRETTY GOOD tankman instance",1e,65,d0,1f),24,false,null(),null());
+HXLINE( 474)			this->set_flipX(true);
+HXLINE( 475)			this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 462)			goto _hx_goto_2;
             		}
             		/* default */{
-HXLINE( 482)			::String fileNew = (this->curCharacter + HX_("Anims",22,39,11,b6));
-HXLINE( 483)			::String library = null();
-HXDLIN( 483)			if (::openfl::utils::Assets_obj::exists(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library),null())) {
-HXLINE( 485)				::String library = null();
-HXDLIN( 485)				::Array< ::String > characterAnims = ::meta::CoolUtil_obj::coolTextFile(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
-HXLINE( 486)				::String characterName = ::StringTools_obj::trim(characterAnims->__get(0));
-HXLINE( 487)				::String key = (HX_("characters/",45,3c,bf,be) + characterName);
-HXDLIN( 487)				::String library1 = null();
-HXDLIN( 487)				::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + key) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library1);
-HXDLIN( 487)				this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + key) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library1))));
-HXLINE( 488)				{
-HXLINE( 488)					int _g = 1;
-HXDLIN( 488)					int _g1 = characterAnims->length;
-HXDLIN( 488)					while((_g < _g1)){
-HXLINE( 488)						_g = (_g + 1);
-HXDLIN( 488)						int i = (_g - 1);
-HXLINE( 490)						::String library = null();
-HXDLIN( 490)						::Array< ::Dynamic> getterArray = ::meta::CoolUtil_obj::getAnimsFromTxt(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
-HXLINE( 491)						 ::flixel::animation::FlxAnimationController _hx_tmp = this->animation;
-HXDLIN( 491)						::String getterArray1 = getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(0);
-HXDLIN( 491)						_hx_tmp->addByPrefix(getterArray1,::StringTools_obj::trim(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(1)),24,false,null(),null());
+HXLINE( 492)			::String fileNew = (this->curCharacter + HX_("Anims",22,39,11,b6));
+HXLINE( 493)			::String library = null();
+HXDLIN( 493)			if (::openfl::utils::Assets_obj::exists(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library),null())) {
+HXLINE( 495)				::String library = null();
+HXDLIN( 495)				::Array< ::String > characterAnims = ::meta::CoolUtil_obj::coolTextFile(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
+HXLINE( 496)				::String characterName = ::StringTools_obj::trim(characterAnims->__get(0));
+HXLINE( 497)				::String key = (HX_("characters/",45,3c,bf,be) + characterName);
+HXDLIN( 497)				::String library1 = null();
+HXDLIN( 497)				::String _hx_tmp = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + key) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library1);
+HXDLIN( 497)				this->set_frames(::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(_hx_tmp,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + key) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library1))));
+HXLINE( 498)				{
+HXLINE( 498)					int _g = 1;
+HXDLIN( 498)					int _g1 = characterAnims->length;
+HXDLIN( 498)					while((_g < _g1)){
+HXLINE( 498)						_g = (_g + 1);
+HXDLIN( 498)						int i = (_g - 1);
+HXLINE( 500)						::String library = null();
+HXDLIN( 500)						::Array< ::Dynamic> getterArray = ::meta::CoolUtil_obj::getAnimsFromTxt(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + fileNew) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
+HXLINE( 501)						 ::flixel::animation::FlxAnimationController _hx_tmp = this->animation;
+HXDLIN( 501)						::String getterArray1 = getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(0);
+HXDLIN( 501)						_hx_tmp->addByPrefix(getterArray1,::StringTools_obj::trim(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(1)),24,false,null(),null());
             					}
             				}
             			}
             			else {
-HXLINE( 497)				::String library = null();
-HXDLIN( 497)				::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/DADDY_DEAREST",4c,60,28,2b)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
-HXDLIN( 497)				tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/DADDY_DEAREST",4c,60,28,2b)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
-HXLINE( 498)				this->set_frames(tex);
-HXLINE( 499)				this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Dad idle dance",80,2a,95,5c),30,false,null(),null());
-HXLINE( 500)				this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Dad Sing Note UP",91,e8,1d,0c),24,null(),null(),null());
-HXLINE( 501)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Dad Sing Note RIGHT",46,eb,bc,9e),24,null(),null(),null());
-HXLINE( 502)				this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Dad Sing Note DOWN",18,d8,98,b2),24,null(),null(),null());
-HXLINE( 503)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Dad Sing Note LEFT",bd,e7,da,b7),24,null(),null(),null());
-HXLINE( 505)				this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 507)				::String library = null();
+HXDLIN( 507)				::String tex1 = ::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/DADDY_DEAREST",4c,60,28,2b)) + HX_(".png",3b,2d,bd,1e)),HX_("IMAGE",3b,57,57,3b),library);
+HXDLIN( 507)				tex = ::flixel::graphics::frames::FlxAtlasFrames_obj::fromSparrow(tex1,::sys::io::File_obj::getContent(::Paths_obj::getPath(((HX_("images/",77,50,74,c1) + HX_("characters/DADDY_DEAREST",4c,60,28,2b)) + HX_(".xml",69,3e,c3,1e)),HX_("TEXT",ad,94,ba,37),library)));
+HXLINE( 508)				this->set_frames(tex);
+HXLINE( 509)				this->animation->addByPrefix(HX_("idle",14,a7,b3,45),HX_("Dad idle dance",80,2a,95,5c),30,false,null(),null());
+HXLINE( 510)				this->animation->addByPrefix(HX_("singUP",6a,52,21,b9),HX_("Dad Sing Note UP",91,e8,1d,0c),24,null(),null(),null());
+HXLINE( 511)				this->animation->addByPrefix(HX_("singRIGHT",0d,6f,70,ac),HX_("Dad Sing Note RIGHT",46,eb,bc,9e),24,null(),null(),null());
+HXLINE( 512)				this->animation->addByPrefix(HX_("singDOWN",31,2a,ad,36),HX_("Dad Sing Note DOWN",18,d8,98,b2),24,null(),null(),null());
+HXLINE( 513)				this->animation->addByPrefix(HX_("singLEFT",d6,39,ef,3b),HX_("Dad Sing Note LEFT",bd,e7,da,b7),24,null(),null(),null());
+HXLINE( 515)				this->playAnim(HX_("idle",14,a7,b3,45),null(),null(),null());
             			}
             		}
             		_hx_goto_2:;
-HXLINE( 510)		::String library = null();
-HXDLIN( 510)		if (::openfl::utils::Assets_obj::exists(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library),null())) {
-HXLINE( 512)			::String library = null();
-HXDLIN( 512)			::Array< ::String > characterOffsets = ::meta::CoolUtil_obj::coolTextFile(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
-HXLINE( 513)			{
-HXLINE( 513)				int _g = 0;
-HXDLIN( 513)				int _g1 = characterOffsets->length;
-HXDLIN( 513)				while((_g < _g1)){
-HXLINE( 513)					_g = (_g + 1);
-HXDLIN( 513)					int i = (_g - 1);
-HXLINE( 515)					::String library = null();
-HXDLIN( 515)					::Array< ::Dynamic> getterArray = ::meta::CoolUtil_obj::getOffsetsFromTxt(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
-HXLINE( 516)					::String getterArray1 = getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(0);
-HXDLIN( 516)					 ::Dynamic _hx_tmp = ::Std_obj::parseInt(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(1));
-HXDLIN( 516)					this->addOffset(getterArray1,_hx_tmp,::Std_obj::parseInt(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(2)));
+HXLINE( 520)		::String library = null();
+HXDLIN( 520)		if (::openfl::utils::Assets_obj::exists(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library),null())) {
+HXLINE( 522)			::String library = null();
+HXDLIN( 522)			::Array< ::String > characterOffsets = ::meta::CoolUtil_obj::coolTextFile(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
+HXLINE( 523)			{
+HXLINE( 523)				int _g = 0;
+HXDLIN( 523)				int _g1 = characterOffsets->length;
+HXDLIN( 523)				while((_g < _g1)){
+HXLINE( 523)					_g = (_g + 1);
+HXDLIN( 523)					int i = (_g - 1);
+HXLINE( 525)					::String library = null();
+HXDLIN( 525)					::Array< ::Dynamic> getterArray = ::meta::CoolUtil_obj::getOffsetsFromTxt(::Paths_obj::getPath(((HX_("images/characters/",2e,e1,08,ac) + (this->curCharacter + HX_("Offsets",60,31,b6,a4))) + HX_(".txt",02,3f,c0,1e)),HX_("TEXT",ad,94,ba,37),library));
+HXLINE( 526)					::String getterArray1 = getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(0);
+HXDLIN( 526)					 ::Dynamic _hx_tmp = ::Std_obj::parseInt(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(1));
+HXDLIN( 526)					this->addOffset(getterArray1,_hx_tmp,::Std_obj::parseInt(getterArray->__get(i).StaticCast< ::Array< ::String > >()->__get(2)));
             				}
             			}
             		}
-HXLINE( 520)		this->dance(null());
-HXLINE( 522)		if (this->isPlayer) {
-HXLINE( 524)			this->set_flipX(!(this->flipX));
-HXLINE( 527)			if (!(::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00)))) {
-HXLINE( 528)				this->flipLeftRight();
+HXLINE( 530)		this->dance(null());
+HXLINE( 532)		if (this->isPlayer) {
+HXLINE( 534)			this->set_flipX(!(this->flipX));
+HXLINE( 537)			if (!(::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00)))) {
+HXLINE( 538)				this->flipLeftRight();
             			}
             		}
             		else {
-HXLINE( 531)			if (::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00))) {
-HXLINE( 532)				this->flipLeftRight();
+HXLINE( 541)			if (::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00))) {
+HXLINE( 542)				this->flipLeftRight();
             			}
             		}
-HXLINE( 534)		this->set_x(x);
-HXLINE( 535)		this->set_y(y);
+HXLINE( 544)		this->set_x(x);
+HXLINE( 545)		this->set_y(y);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC3(Character_obj,setCharacter,(void))
 
 void Character_obj::flipLeftRight(){
-            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_539_flipLeftRight)
-HXLINE( 541)		::Array< int > oldRight = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHT",0d,6f,70,ac))) )->frames;
-HXLINE( 544)		( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHT",0d,6f,70,ac))) )->frames = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFT",d6,39,ef,3b))) )->frames;
-HXLINE( 547)		( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFT",d6,39,ef,3b))) )->frames = oldRight;
-HXLINE( 551)		if (::hx::IsNotNull( this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3)) )) {
-HXLINE( 553)			::Array< int > oldMiss = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3))) )->frames;
-HXLINE( 554)			( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3))) )->frames = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFTmiss",d2,2f,9c,b6))) )->frames;
-HXLINE( 555)			( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFTmiss",d2,2f,9c,b6))) )->frames = oldMiss;
+            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_549_flipLeftRight)
+HXLINE( 551)		::Array< int > oldRight = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHT",0d,6f,70,ac))) )->frames;
+HXLINE( 554)		( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHT",0d,6f,70,ac))) )->frames = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFT",d6,39,ef,3b))) )->frames;
+HXLINE( 557)		( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFT",d6,39,ef,3b))) )->frames = oldRight;
+HXLINE( 561)		if (::hx::IsNotNull( this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3)) )) {
+HXLINE( 563)			::Array< int > oldMiss = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3))) )->frames;
+HXLINE( 564)			( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singRIGHTmiss",89,cc,65,e3))) )->frames = ( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFTmiss",d2,2f,9c,b6))) )->frames;
+HXLINE( 565)			( ( ::flixel::animation::FlxAnimation)(this->animation->_animations->get(HX_("singLEFTmiss",d2,2f,9c,b6))) )->frames = oldMiss;
             		}
             	}
 
@@ -736,101 +745,101 @@ HXLINE( 555)			( ( ::flixel::animation::FlxAnimation)(this->animation->_animatio
 HX_DEFINE_DYNAMIC_FUNC0(Character_obj,flipLeftRight,(void))
 
 void Character_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_560_update)
-HXLINE( 561)		if (!(::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00)))) {
-HXLINE( 563)			if (::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sing",4f,96,53,4c))) {
-HXLINE( 565)				 ::gameObjects::Character _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 565)				_hx_tmp->holdTimer = (_hx_tmp->holdTimer + elapsed);
+            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_570_update)
+HXLINE( 571)		if (!(::StringTools_obj::startsWith(this->curCharacter,HX_("bf",c4,55,00,00)))) {
+HXLINE( 573)			if (::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sing",4f,96,53,4c))) {
+HXLINE( 575)				 ::gameObjects::Character _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 575)				_hx_tmp->holdTimer = (_hx_tmp->holdTimer + elapsed);
             			}
-HXLINE( 568)			Float dadVar = ( (Float)(4) );
-HXLINE( 569)			if ((this->holdTimer >= ((::meta::data::Conductor_obj::stepCrochet * dadVar) * ((Float)0.001)))) {
-HXLINE( 571)				this->dance(null());
-HXLINE( 572)				this->holdTimer = ( (Float)(0) );
-            			}
-            		}
-HXLINE( 576)		::String curCharSimplified = this->simplifyCharacter();
-HXLINE( 577)		if ((curCharSimplified == HX_("gf",1f,5a,00,00))) {
-HXLINE( 580)			bool _hx_tmp;
-HXDLIN( 580)			if ((this->animation->_curAnim->name == HX_("hairFall",bd,48,d6,cb))) {
-HXLINE( 580)				_hx_tmp = this->animation->_curAnim->finished;
-            			}
-            			else {
-HXLINE( 580)				_hx_tmp = false;
-            			}
-HXDLIN( 580)			if (_hx_tmp) {
-HXLINE( 581)				this->playAnim(HX_("danceRight",a9,7f,a6,91),null(),null(),null());
-            			}
-HXLINE( 582)			bool _hx_tmp1;
-HXDLIN( 582)			if (::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sad",16,98,57,00))) {
-HXLINE( 582)				_hx_tmp1 = this->animation->_curAnim->finished;
-            			}
-            			else {
-HXLINE( 582)				_hx_tmp1 = false;
-            			}
-HXDLIN( 582)			if (_hx_tmp1) {
-HXLINE( 583)				this->playAnim(HX_("danceLeft",da,cc,f9,df),null(),null(),null());
+HXLINE( 578)			Float dadVar = ( (Float)(4) );
+HXLINE( 579)			if ((this->holdTimer >= ((::meta::data::Conductor_obj::stepCrochet * dadVar) * ((Float)0.001)))) {
+HXLINE( 581)				this->dance(null());
+HXLINE( 582)				this->holdTimer = ( (Float)(0) );
             			}
             		}
-HXLINE( 587)		bool _hx_tmp;
-HXDLIN( 587)		if (this->animation->_curAnim->finished) {
-HXLINE( 587)			_hx_tmp = (this->animation->_curAnim->name == HX_("idle",14,a7,b3,45));
+HXLINE( 586)		::String curCharSimplified = this->simplifyCharacter();
+HXLINE( 587)		if ((curCharSimplified == HX_("gf",1f,5a,00,00))) {
+HXLINE( 590)			bool _hx_tmp;
+HXDLIN( 590)			if ((this->animation->_curAnim->name == HX_("hairFall",bd,48,d6,cb))) {
+HXLINE( 590)				_hx_tmp = this->animation->_curAnim->finished;
+            			}
+            			else {
+HXLINE( 590)				_hx_tmp = false;
+            			}
+HXDLIN( 590)			if (_hx_tmp) {
+HXLINE( 591)				this->playAnim(HX_("danceRight",a9,7f,a6,91),null(),null(),null());
+            			}
+HXLINE( 592)			bool _hx_tmp1;
+HXDLIN( 592)			if (::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sad",16,98,57,00))) {
+HXLINE( 592)				_hx_tmp1 = this->animation->_curAnim->finished;
+            			}
+            			else {
+HXLINE( 592)				_hx_tmp1 = false;
+            			}
+HXDLIN( 592)			if (_hx_tmp1) {
+HXLINE( 593)				this->playAnim(HX_("danceLeft",da,cc,f9,df),null(),null(),null());
+            			}
+            		}
+HXLINE( 597)		bool _hx_tmp;
+HXDLIN( 597)		if (this->animation->_curAnim->finished) {
+HXLINE( 597)			_hx_tmp = (this->animation->_curAnim->name == HX_("idle",14,a7,b3,45));
             		}
             		else {
-HXLINE( 587)			_hx_tmp = false;
+HXLINE( 597)			_hx_tmp = false;
             		}
-HXDLIN( 587)		if (_hx_tmp) {
-HXLINE( 590)			if (::hx::IsNotNull( this->animation->_animations->get(HX_("idlePost",94,71,4c,3f)) )) {
-HXLINE( 592)				this->animation->play(HX_("idlePost",94,71,4c,3f),true,false,0);
+HXDLIN( 597)		if (_hx_tmp) {
+HXLINE( 600)			if (::hx::IsNotNull( this->animation->_animations->get(HX_("idlePost",94,71,4c,3f)) )) {
+HXLINE( 602)				this->animation->play(HX_("idlePost",94,71,4c,3f),true,false,0);
             			}
             		}
-HXLINE( 595)		this->super::update(elapsed);
+HXLINE( 605)		this->super::update(elapsed);
             	}
 
 
 void Character_obj::dance( ::Dynamic __o_forced){
             		 ::Dynamic forced = __o_forced;
             		if (::hx::IsNull(__o_forced)) forced = false;
-            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_605_dance)
-HXDLIN( 605)		if (!(this->debugMode)) {
-HXLINE( 607)			::String curCharSimplified = this->simplifyCharacter();
-HXLINE( 608)			if ((curCharSimplified == HX_("gf",1f,5a,00,00))) {
-HXLINE( 611)				bool _hx_tmp;
-HXDLIN( 611)				if (!(::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("hair",22,27,08,45)))) {
-HXLINE( 611)					_hx_tmp = !(::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sad",16,98,57,00)));
+            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_615_dance)
+HXDLIN( 615)		if (!(this->debugMode)) {
+HXLINE( 617)			::String curCharSimplified = this->simplifyCharacter();
+HXLINE( 618)			if ((curCharSimplified == HX_("gf",1f,5a,00,00))) {
+HXLINE( 621)				bool _hx_tmp;
+HXDLIN( 621)				if (!(::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("hair",22,27,08,45)))) {
+HXLINE( 621)					_hx_tmp = !(::StringTools_obj::startsWith(this->animation->_curAnim->name,HX_("sad",16,98,57,00)));
             				}
             				else {
-HXLINE( 611)					_hx_tmp = false;
+HXLINE( 621)					_hx_tmp = false;
             				}
-HXDLIN( 611)				if (_hx_tmp) {
-HXLINE( 613)					this->danced = !(this->danced);
-HXLINE( 615)					if (this->danced) {
-HXLINE( 616)						this->playAnim(HX_("danceRight",a9,7f,a6,91),forced,null(),null());
+HXDLIN( 621)				if (_hx_tmp) {
+HXLINE( 623)					this->danced = !(this->danced);
+HXLINE( 625)					if (this->danced) {
+HXLINE( 626)						this->playAnim(HX_("danceRight",a9,7f,a6,91),forced,null(),null());
             					}
             					else {
-HXLINE( 618)						this->playAnim(HX_("danceLeft",da,cc,f9,df),forced,null(),null());
+HXLINE( 628)						this->playAnim(HX_("danceLeft",da,cc,f9,df),forced,null(),null());
             					}
             				}
             			}
             			else {
-HXLINE( 622)				bool _hx_tmp;
-HXDLIN( 622)				if (::hx::IsNotNull( this->animation->_animations->get(HX_("danceLeft",da,cc,f9,df)) )) {
-HXLINE( 622)					_hx_tmp = ::hx::IsNotNull( this->animation->_animations->get(HX_("danceRight",a9,7f,a6,91)) );
+HXLINE( 632)				bool _hx_tmp;
+HXDLIN( 632)				if (::hx::IsNotNull( this->animation->_animations->get(HX_("danceLeft",da,cc,f9,df)) )) {
+HXLINE( 632)					_hx_tmp = ::hx::IsNotNull( this->animation->_animations->get(HX_("danceRight",a9,7f,a6,91)) );
             				}
             				else {
-HXLINE( 622)					_hx_tmp = false;
+HXLINE( 632)					_hx_tmp = false;
             				}
-HXDLIN( 622)				if (_hx_tmp) {
-HXLINE( 623)					::String _hx_tmp;
-HXDLIN( 623)					if ((this->animation->_curAnim->name == HX_("danceRight",a9,7f,a6,91))) {
-HXLINE( 623)						_hx_tmp = HX_("danceLeft",da,cc,f9,df);
+HXDLIN( 632)				if (_hx_tmp) {
+HXLINE( 633)					::String _hx_tmp;
+HXDLIN( 633)					if ((this->animation->_curAnim->name == HX_("danceRight",a9,7f,a6,91))) {
+HXLINE( 633)						_hx_tmp = HX_("danceLeft",da,cc,f9,df);
             					}
             					else {
-HXLINE( 623)						_hx_tmp = HX_("danceRight",a9,7f,a6,91);
+HXLINE( 633)						_hx_tmp = HX_("danceRight",a9,7f,a6,91);
             					}
-HXDLIN( 623)					this->playAnim(_hx_tmp,forced,null(),null());
+HXDLIN( 633)					this->playAnim(_hx_tmp,forced,null(),null());
             				}
             				else {
-HXLINE( 626)					this->playAnim(HX_("idle",14,a7,b3,45),forced,null(),null());
+HXLINE( 636)					this->playAnim(HX_("idle",14,a7,b3,45),forced,null(),null());
             				}
             			}
             		}
@@ -843,38 +852,38 @@ void Character_obj::playAnim(::String AnimName,::hx::Null< bool >  __o_Force,::h
             		bool Force = __o_Force.Default(false);
             		bool Reversed = __o_Reversed.Default(false);
             		int Frame = __o_Frame.Default(0);
-            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_632_playAnim)
-HXLINE( 633)		this->super::playAnim(AnimName,Force,Reversed,Frame);
-HXLINE( 635)		if ((this->curCharacter == HX_("gf",1f,5a,00,00))) {
-HXLINE( 637)			if ((AnimName == HX_("singLEFT",d6,39,ef,3b))) {
-HXLINE( 638)				this->danced = true;
+            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_642_playAnim)
+HXLINE( 643)		this->super::playAnim(AnimName,Force,Reversed,Frame);
+HXLINE( 645)		if ((this->curCharacter == HX_("gf",1f,5a,00,00))) {
+HXLINE( 647)			if ((AnimName == HX_("singLEFT",d6,39,ef,3b))) {
+HXLINE( 648)				this->danced = true;
             			}
             			else {
-HXLINE( 639)				if ((AnimName == HX_("singRIGHT",0d,6f,70,ac))) {
-HXLINE( 640)					this->danced = false;
+HXLINE( 649)				if ((AnimName == HX_("singRIGHT",0d,6f,70,ac))) {
+HXLINE( 650)					this->danced = false;
             				}
             			}
-HXLINE( 642)			bool _hx_tmp;
-HXDLIN( 642)			if ((AnimName != HX_("singUP",6a,52,21,b9))) {
-HXLINE( 642)				_hx_tmp = (AnimName == HX_("singDOWN",31,2a,ad,36));
+HXLINE( 652)			bool _hx_tmp;
+HXDLIN( 652)			if ((AnimName != HX_("singUP",6a,52,21,b9))) {
+HXLINE( 652)				_hx_tmp = (AnimName == HX_("singDOWN",31,2a,ad,36));
             			}
             			else {
-HXLINE( 642)				_hx_tmp = true;
+HXLINE( 652)				_hx_tmp = true;
             			}
-HXDLIN( 642)			if (_hx_tmp) {
-HXLINE( 643)				this->danced = !(this->danced);
+HXDLIN( 652)			if (_hx_tmp) {
+HXLINE( 653)				this->danced = !(this->danced);
             			}
             		}
             	}
 
 
 ::String Character_obj::simplifyCharacter(){
-            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_648_simplifyCharacter)
-HXLINE( 649)		::String base = this->curCharacter;
-HXLINE( 651)		if ((base.indexOf(HX_("-",2d,00,00,00),null()) != -1)) {
-HXLINE( 652)			base = base.substring(0,base.indexOf(HX_("-",2d,00,00,00),null()));
+            	HX_STACKFRAME(&_hx_pos_d07ef0c135db2bf5_658_simplifyCharacter)
+HXLINE( 659)		::String base = this->curCharacter;
+HXLINE( 661)		if ((base.indexOf(HX_("-",2d,00,00,00),null()) != -1)) {
+HXLINE( 662)			base = base.substring(0,base.indexOf(HX_("-",2d,00,00,00),null()));
             		}
-HXLINE( 653)		return base;
+HXLINE( 663)		return base;
             	}
 
 

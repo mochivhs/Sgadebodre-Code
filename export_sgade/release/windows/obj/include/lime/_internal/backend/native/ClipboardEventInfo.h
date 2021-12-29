@@ -6,7 +6,7 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_STACK_FRAME(_hx_pos_45f117d879fd522d_647_new)
+HX_DECLARE_STACK_FRAME(_hx_pos_45f117d879fd522d_635_new)
 HX_DECLARE_CLASS4(lime,_internal,backend,native,ClipboardEventInfo)
 
 namespace lime{
@@ -41,8 +41,8 @@ class HXCPP_CLASS_ATTRIBUTES ClipboardEventInfo_obj : public ::hx::Object
 			ClipboardEventInfo_obj *__this = (ClipboardEventInfo_obj*)(::hx::Ctx::alloc(_hx_ctx, sizeof(ClipboardEventInfo_obj), false, "lime._internal.backend.native.ClipboardEventInfo"));
 			*(void **)__this = ClipboardEventInfo_obj::_hx_vtable;
 {
-            	HX_STACKFRAME(&_hx_pos_45f117d879fd522d_647_new)
-HXDLIN( 647)		( ( ::lime::_internal::backend::native::ClipboardEventInfo)(__this) )->type = ( (int)(type) );
+            	HX_STACKFRAME(&_hx_pos_45f117d879fd522d_635_new)
+HXDLIN( 635)		( ( ::lime::_internal::backend::native::ClipboardEventInfo)(__this) )->type = ( (int)(type) );
             	}
 		
 			return __this;

@@ -115,8 +115,9 @@ void TransitionEffect_obj::onFinish( ::flixel::util::FlxTimer f){
             	HX_STACKFRAME(&_hx_pos_04bb584d68aa991f_61_onFinish)
 HXLINE(  62)		this->finished = true;
 HXLINE(  63)		if (::hx::IsNotNull( this->finishCallback )) {
-HXLINE(  65)			this->finishCallback();
+HXLINE(  65)			 ::Dynamic callback = this->finishCallback;
 HXLINE(  66)			this->finishCallback = null();
+HXLINE(  67)			callback();
             		}
             	}
 

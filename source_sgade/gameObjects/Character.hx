@@ -177,6 +177,16 @@ class Character extends FNFSprite
 	
 						
 						playAnim('idle');	
+
+
+					case 'sgadebodreXmas':
+						// BALLS LOADING CODE
+						tex = Paths.getSparrowAtlas('characters/sgadebodre_assets_christmas');
+						frames = tex;
+						animation.addByPrefix('idle', 'idle', 24, false);
+	
+						
+						playAnim('idle');
 	
 
 			case 'mom-car':

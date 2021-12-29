@@ -181,7 +181,7 @@ HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_410_handleSensorEvent,"lime._inter
 HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_420_handleTextEvent,"lime._internal.backend.native.NativeApplication","handleTextEvent",0xd6b1219e,"lime._internal.backend.native.NativeApplication.handleTextEvent","lime/_internal/backend/native/NativeApplication.hx",420,0xc1eba895)
 HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_441_handleTouchEvent,"lime._internal.backend.native.NativeApplication","handleTouchEvent",0xa647254a,"lime._internal.backend.native.NativeApplication.handleTouchEvent","lime/_internal/backend/native/NativeApplication.hx",441,0xc1eba895)
 HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_502_handleWindowEvent,"lime._internal.backend.native.NativeApplication","handleWindowEvent",0x42f025bb,"lime._internal.backend.native.NativeApplication.handleWindowEvent","lime/_internal/backend/native/NativeApplication.hx",502,0xc1eba895)
-HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_582_updateTimer,"lime._internal.backend.native.NativeApplication","updateTimer",0xd6c37ab5,"lime._internal.backend.native.NativeApplication.updateTimer","lime/_internal/backend/native/NativeApplication.hx",582,0xc1eba895)
+HX_LOCAL_STACK_FRAME(_hx_pos_8a85bd2a97260674_570_updateTimer,"lime._internal.backend.native.NativeApplication","updateTimer",0xd6c37ab5,"lime._internal.backend.native.NativeApplication.updateTimer","lime/_internal/backend/native/NativeApplication.hx",570,0xc1eba895)
 namespace lime{
 namespace _internal{
 namespace backend{
@@ -701,31 +701,25 @@ HXLINE( 541)					window->onMaximize->dispatch();
 HXLINE( 544)					window->_hx___minimized = true;
 HXLINE( 545)					window->_hx___maximized = false;
 HXLINE( 546)					window->_hx___fullscreen = false;
-HXLINE( 548)					if (!(window->_hx___resizable)) {
-HXLINE( 550)						window->_hx___backend->setResizable(true);
-            					}
-HXLINE( 553)					window->onMinimize->dispatch();
+HXLINE( 547)					window->onMinimize->dispatch();
             				}
             				break;
             				case (int)10: {
-HXLINE( 556)					window->_hx___x = this->windowEventInfo->x;
-HXLINE( 557)					window->_hx___y = this->windowEventInfo->y;
-HXLINE( 558)					window->onMove->dispatch(( (Float)(this->windowEventInfo->x) ),( (Float)(this->windowEventInfo->y) ));
+HXLINE( 550)					window->_hx___x = this->windowEventInfo->x;
+HXLINE( 551)					window->_hx___y = this->windowEventInfo->y;
+HXLINE( 552)					window->onMove->dispatch(( (Float)(this->windowEventInfo->x) ),( (Float)(this->windowEventInfo->y) ));
             				}
             				break;
             				case (int)11: {
-HXLINE( 561)					window->_hx___width = this->windowEventInfo->width;
-HXLINE( 562)					window->_hx___height = this->windowEventInfo->height;
-HXLINE( 563)					window->onResize->dispatch(this->windowEventInfo->width,this->windowEventInfo->height);
+HXLINE( 555)					window->_hx___width = this->windowEventInfo->width;
+HXLINE( 556)					window->_hx___height = this->windowEventInfo->height;
+HXLINE( 557)					window->onResize->dispatch(this->windowEventInfo->width,this->windowEventInfo->height);
             				}
             				break;
             				case (int)12: {
-HXLINE( 566)					window->_hx___fullscreen = false;
-HXLINE( 567)					window->_hx___minimized = false;
-HXLINE( 569)					if (!(window->_hx___resizable)) {
-HXLINE( 571)						window->_hx___backend->setResizable(false);
-            					}
-HXLINE( 574)					window->onRestore->dispatch();
+HXLINE( 560)					window->_hx___fullscreen = false;
+HXLINE( 561)					window->_hx___minimized = false;
+HXLINE( 562)					window->onRestore->dispatch();
             				}
             				break;
             			}
@@ -736,51 +730,51 @@ HXLINE( 574)					window->onRestore->dispatch();
 HX_DEFINE_DYNAMIC_FUNC0(NativeApplication_obj,handleWindowEvent,(void))
 
 void NativeApplication_obj::updateTimer(){
-            	HX_STACKFRAME(&_hx_pos_8a85bd2a97260674_582_updateTimer)
-HXDLIN( 582)		if ((::haxe::Timer_obj::sRunningTimers->length > 0)) {
-HXLINE( 584)			int currentTime = ::lime::_hx_system::System_obj::getTimer();
-HXLINE( 585)			bool foundNull = false;
-HXLINE( 586)			 ::haxe::Timer timer;
-HXLINE( 588)			{
-HXLINE( 588)				int _g = 0;
-HXDLIN( 588)				int _g1 = ::haxe::Timer_obj::sRunningTimers->length;
-HXDLIN( 588)				while((_g < _g1)){
-HXLINE( 588)					_g = (_g + 1);
-HXDLIN( 588)					int i = (_g - 1);
-HXLINE( 590)					timer = ::haxe::Timer_obj::sRunningTimers->__get(i).StaticCast<  ::haxe::Timer >();
-HXLINE( 592)					if (::hx::IsNotNull( timer )) {
-HXLINE( 594)						bool _hx_tmp;
-HXDLIN( 594)						if (timer->mRunning) {
-HXLINE( 594)							_hx_tmp = (currentTime >= timer->mFireAt);
+            	HX_STACKFRAME(&_hx_pos_8a85bd2a97260674_570_updateTimer)
+HXDLIN( 570)		if ((::haxe::Timer_obj::sRunningTimers->length > 0)) {
+HXLINE( 572)			int currentTime = ::lime::_hx_system::System_obj::getTimer();
+HXLINE( 573)			bool foundNull = false;
+HXLINE( 574)			 ::haxe::Timer timer;
+HXLINE( 576)			{
+HXLINE( 576)				int _g = 0;
+HXDLIN( 576)				int _g1 = ::haxe::Timer_obj::sRunningTimers->length;
+HXDLIN( 576)				while((_g < _g1)){
+HXLINE( 576)					_g = (_g + 1);
+HXDLIN( 576)					int i = (_g - 1);
+HXLINE( 578)					timer = ::haxe::Timer_obj::sRunningTimers->__get(i).StaticCast<  ::haxe::Timer >();
+HXLINE( 580)					if (::hx::IsNotNull( timer )) {
+HXLINE( 582)						bool _hx_tmp;
+HXDLIN( 582)						if (timer->mRunning) {
+HXLINE( 582)							_hx_tmp = (currentTime >= timer->mFireAt);
             						}
             						else {
-HXLINE( 594)							_hx_tmp = false;
+HXLINE( 582)							_hx_tmp = false;
             						}
-HXDLIN( 594)						if (_hx_tmp) {
-HXLINE( 596)							 ::haxe::Timer timer1 = timer;
-HXDLIN( 596)							timer1->mFireAt = (timer1->mFireAt + timer->mTime);
-HXLINE( 597)							timer->run();
+HXDLIN( 582)						if (_hx_tmp) {
+HXLINE( 584)							 ::haxe::Timer timer1 = timer;
+HXDLIN( 584)							timer1->mFireAt = (timer1->mFireAt + timer->mTime);
+HXLINE( 585)							timer->run();
             						}
             					}
             					else {
-HXLINE( 602)						foundNull = true;
+HXLINE( 590)						foundNull = true;
             					}
             				}
             			}
-HXLINE( 606)			if (foundNull) {
-HXLINE( 608)				::Array< ::Dynamic> _g = ::Array_obj< ::Dynamic>::__new(0);
-HXDLIN( 608)				{
-HXLINE( 608)					int _g1 = 0;
-HXDLIN( 608)					::Array< ::Dynamic> _g2 = ::haxe::Timer_obj::sRunningTimers;
-HXDLIN( 608)					while((_g1 < _g2->length)){
-HXLINE( 608)						 ::haxe::Timer v = _g2->__get(_g1).StaticCast<  ::haxe::Timer >();
-HXDLIN( 608)						_g1 = (_g1 + 1);
-HXDLIN( 608)						if (::hx::IsNotNull( v )) {
-HXLINE( 608)							_g->push(v);
+HXLINE( 594)			if (foundNull) {
+HXLINE( 596)				::Array< ::Dynamic> _g = ::Array_obj< ::Dynamic>::__new(0);
+HXDLIN( 596)				{
+HXLINE( 596)					int _g1 = 0;
+HXDLIN( 596)					::Array< ::Dynamic> _g2 = ::haxe::Timer_obj::sRunningTimers;
+HXDLIN( 596)					while((_g1 < _g2->length)){
+HXLINE( 596)						 ::haxe::Timer v = _g2->__get(_g1).StaticCast<  ::haxe::Timer >();
+HXDLIN( 596)						_g1 = (_g1 + 1);
+HXDLIN( 596)						if (::hx::IsNotNull( v )) {
+HXLINE( 596)							_g->push(v);
             						}
             					}
             				}
-HXDLIN( 608)				::haxe::Timer_obj::sRunningTimers = _g;
+HXDLIN( 596)				::haxe::Timer_obj::sRunningTimers = _g;
             			}
             		}
             	}

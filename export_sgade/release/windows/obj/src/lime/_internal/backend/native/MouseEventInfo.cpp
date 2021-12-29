@@ -5,8 +5,8 @@
 #include <lime/_internal/backend/native/MouseEventInfo.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_3eb566585b06ea2e_789_new,"lime._internal.backend.native.MouseEventInfo","new",0x46fd57c7,"lime._internal.backend.native.MouseEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",789,0xc1eba895)
-HX_LOCAL_STACK_FRAME(_hx_pos_3eb566585b06ea2e_801_clone,"lime._internal.backend.native.MouseEventInfo","clone",0xb20a8284,"lime._internal.backend.native.MouseEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",801,0xc1eba895)
+HX_DEFINE_STACK_FRAME(_hx_pos_3eb566585b06ea2e_777_new,"lime._internal.backend.native.MouseEventInfo","new",0x46fd57c7,"lime._internal.backend.native.MouseEventInfo.new","lime/_internal/backend/native/NativeApplication.hx",777,0xc1eba895)
+HX_LOCAL_STACK_FRAME(_hx_pos_3eb566585b06ea2e_789_clone,"lime._internal.backend.native.MouseEventInfo","clone",0xb20a8284,"lime._internal.backend.native.MouseEventInfo.clone","lime/_internal/backend/native/NativeApplication.hx",789,0xc1eba895)
 namespace lime{
 namespace _internal{
 namespace backend{
@@ -19,14 +19,14 @@ void MouseEventInfo_obj::__construct( ::Dynamic type,::hx::Null< int >  __o_wind
             		int button = __o_button.Default(0);
             		Float movementX = __o_movementX.Default(0);
             		Float movementY = __o_movementY.Default(0);
-            	HX_STACKFRAME(&_hx_pos_3eb566585b06ea2e_789_new)
-HXLINE( 790)		this->type = ( (int)(type) );
-HXLINE( 791)		this->windowID = 0;
-HXLINE( 792)		this->x = x;
-HXLINE( 793)		this->y = y;
-HXLINE( 794)		this->button = button;
-HXLINE( 795)		this->movementX = movementX;
-HXLINE( 796)		this->movementY = movementY;
+            	HX_STACKFRAME(&_hx_pos_3eb566585b06ea2e_777_new)
+HXLINE( 778)		this->type = ( (int)(type) );
+HXLINE( 779)		this->windowID = 0;
+HXLINE( 780)		this->x = x;
+HXLINE( 781)		this->y = y;
+HXLINE( 782)		this->button = button;
+HXLINE( 783)		this->movementX = movementX;
+HXLINE( 784)		this->movementY = movementY;
             	}
 
 Dynamic MouseEventInfo_obj::__CreateEmpty() { return new MouseEventInfo_obj; }
@@ -45,8 +45,8 @@ bool MouseEventInfo_obj::_hx_isInstanceOf(int inClassId) {
 }
 
  ::lime::_internal::backend::native::MouseEventInfo MouseEventInfo_obj::clone(){
-            	HX_GC_STACKFRAME(&_hx_pos_3eb566585b06ea2e_801_clone)
-HXDLIN( 801)		return  ::lime::_internal::backend::native::MouseEventInfo_obj::__alloc( HX_CTX ,this->type,this->windowID,this->x,this->y,this->button,this->movementX,this->movementY);
+            	HX_GC_STACKFRAME(&_hx_pos_3eb566585b06ea2e_789_clone)
+HXDLIN( 789)		return  ::lime::_internal::backend::native::MouseEventInfo_obj::__alloc( HX_CTX ,this->type,this->windowID,this->x,this->y,this->button,this->movementX,this->movementY);
             	}
 
 
